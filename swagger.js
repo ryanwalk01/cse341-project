@@ -1,15 +1,14 @@
 const router = require('express').Router();
 const swaggerAutogen = require('swagger-autogen')();
 
-const host = process.env.HOST || 'localhost:8080';
-
 const doc = {
     info: {
         title: 'TOTK API',
         description: 'API to manage a database of "The Legend of Zelda: Tears of the Kingdom" Shrines and Skyview Towers'
     },
-    host: host,
-    schemes: ['http'],
+    host: 'cse341-project-ryan.onrender.com',
+    // host: 'localhost:8080',
+    schemes: ['https'],
     basePath: '/'
 };
 
