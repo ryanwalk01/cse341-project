@@ -1,0 +1,97 @@
+### Local Host
+
+    ### Shrines
+
+        ### All Shrines
+        http://localhost:8080/shrines
+
+        ### Shrine by ID
+        http://localhost:8080/shrines/67a3f56c89b1e4c06d2ff191
+
+        ### Create Shrine
+        http://localhost:8080/shrines
+        {
+        "Shrine Name": "Sakunbomar Shrine",
+        "Lightroot Name": "Ramobnukas Lightroot",
+        "Title": "Rauru's Blessing",
+        "Type": "Rauru's Blessing",
+        "Location": "Great Hyrule Forest",
+        "Region": "Central Hyrule",
+        "Map Layer": "Surface",
+        "In Cave?": "No",
+        "Shrine Quest": "None Shall Pass?"
+        }
+
+        ### Update Shrine
+
+        ### Delete Shrine
+
+    ### Towers
+
+        ### All Towers
+        http://localhost:8080/towers
+
+        ### Tower by ID
+        http://localhost:8080/towers/67a3f56c89b1e4c06d2ff191
+
+        ### Create Tower
+        http://localhost:8080/towers
+        {
+        "Name": "Pikida Stonegrove",
+        "Region": "Tabantha Tundra",
+        "Coordinates": "-2318, 3066, 0443",
+        "Launch distance": "443 m"
+        }
+
+        ### Update Tower
+
+        ### Delete Tower
+
+### Render
+
+    ### Shrines
+
+        ### All Shrines
+        https://cse341-ryan.onrender.com/shrines
+
+        ### Shrine by ID
+        https://cse341-ryan.onrender.com/shrines/67a3f56c89b1e4c06d2ff191
+
+        ### Create Shrine
+        https://cse341-ryan.onrender.com/shrines
+        {
+        "Shrine Name": "Pupunke Shrine",
+        "Lightroot Name": "Eknupup Lightroot",
+        "Title": "Rauru's Blessing",
+        "Type": "Rauru's Blessing",
+        "Location": "Great Hyrule Forest",
+        "Region": "Central Hyrule",
+        "Map Layer": "Surface",
+        "In Cave?": "No",
+        "Shrine Quest": "A Pretty Stone and Five Golden Apples"
+        }
+
+        ### Update Shrine
+
+        ### Delete Shrine
+
+    ### Towers
+    
+        ### All Towers
+        https://cse341-ryan.onrender.com/towers
+
+        ### Tower by ID
+        https://cse341-ryan.onrender.com/towers/67a3f56c89b1e4c06d2ff191
+
+        ### Create Tower
+        https://cse341-ryan.onrender.com/towers
+        {
+        "Name": "Thyphlo Ruins",
+        "Region": "Great Hyrule Forest",
+        "Coordinates": "0343, 3133, 0180",
+        "Launch distance": "180 m"
+        }
+
+        ### Update Tower
+
+        ### Delete Tower
