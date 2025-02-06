@@ -6,7 +6,7 @@ const doc = {
         title: 'TOTK API',
         description: 'API to manage a database of "The Legend of Zelda: Tears of the Kingdom" Shrines and Skyview Towers'
     },
-    host: 'https://cse341-project-ryan.onrender.com',
+    host: 'cse341-project-ryan.onrender.com',
     schemes: ['https'],
     basePath: '/'
 };
