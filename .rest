@@ -10,6 +10,8 @@ GET http://localhost:8080/shrines/67a3f56c89b1e4c06d2ff191 HTTP/1.1
 
 ### Create Shrine
 POST http://localhost:8080/shrines HTTP/1.1
+Content-Type: application/json
+
 {
   "Shrine Name": "Sakunbomar Shrine",
   "Lightroot Name": "Ramobnukas Lightroot",
@@ -32,10 +34,12 @@ POST http://localhost:8080/shrines HTTP/1.1
 GET http://localhost:8080/towers HTTP/1.1
 
 ### Tower by ID
-GET http://localhost:8080/towers/67a3f56c89b1e4c06d2ff191 HTTP/1.1
+GET http://localhost:8080/towers/67a3f58e89b1e4c06d2ff1ac HTTP/1.1
 
 ### Create Tower
 POST http://localhost:8080/towers HTTP/1.1
+Content-Type: application/json
+
 {
   "Name": "Pikida Stonegrove",
   "Region": "Tabantha Tundra",
@@ -52,13 +56,15 @@ POST http://localhost:8080/towers HTTP/1.1
 ### Shrines
 
 ### All Shrines
-https://cse341-project-ryan.onrender.com/shrines
+GET https://cse341-project-ryan.onrender.com/shrines HTTP/1.1
 
 ### Shrine by ID
-https://cse341-project-ryan.onrender.com/shrines/67a3f56c89b1e4c06d2ff191
+GET https://cse341-project-ryan.onrender.com/shrines/67a3f56c89b1e4c06d2ff191 HTTP/1.1
 
 ### Create Shrine
-https://cse341-project-ryan.onrender.com/shrines
+POST https://cse341-project-ryan.onrender.com/shrines HTTP/1.1
+Content-Type: application/json
+
 {
   "Shrine Name": "Pupunke Shrine",
   "Lightroot Name": "Eknupup Lightroot",
@@ -81,10 +87,12 @@ https://cse341-project-ryan.onrender.com/shrines
 GET https://cse341-project-ryan.onrender.com/towers HTTP/1.1
 
 ### Tower by ID
-GET https://cse341-project-ryan.onrender.com/towers/67a3f56c89b1e4c06d2ff191 HTTP/1.1
+GET https://cse341-project-ryan.onrender.com/towers/67a3f58e89b1e4c06d2ff1ac HTTP/1.1
 
 ### Create Tower
 POST https://cse341-project-ryan.onrender.com/towers HTTP/1.1
+Content-Type: application/json
+
 {
   "Name": "Thyphlo Ruins",
   "Region": "Great Hyrule Forest",

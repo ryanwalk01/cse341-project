@@ -21,7 +21,7 @@ const getTower = async (req, res) => {
     #swagger.summary = 'Get a tower by ID'
     */
     try {
-        const result = await mongodb.getDb().db().collection('towers').findOne({ _id: ObjectId(req.params.id) });
+        const result = await mongodb.getDb().db().collection('towers').findOne({ _id: new ObjectId(req.params.id) });
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(result);
     } catch (error) {
@@ -60,7 +60,7 @@ const updateTower = async (req, res) => {
     */
     try {
         const updatedTower = req.body;
-        const result = await mongodb.getDb().db().collection('shrines').updateOne({ _id: ObjectId(req.params.id) }, { $set: updatedTower });
+        const result = await mongodb.getDb().db().collection('shrines').updateOne({ _id: new ObjectId(req.params.id) }, { $set: updatedTower });
         res.setHeader('Content-Type', 'application/json');
         res.status(204).json(result);
     } catch (error) {
@@ -73,7 +73,7 @@ const deleteTower = async (req, res) => {
     #swagger.summary = 'Delete a tower'
     */
     try {
-        const result = await mongodb.getDb().db().collection('towers').deleteOne({ _id: ObjectId(req.params.id) });
+        const result = await mongodb.getDb().db().collection('towers').deleteOne({ _id: new ObjectId(req.params.id) });
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(result);
     } catch (error) {

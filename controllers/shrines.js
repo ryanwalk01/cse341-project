@@ -21,7 +21,7 @@ const getShrine = async (req, res) => {
     #swagger.summary = 'Get a shrine by ID'
     */
     try {
-        const result = await mongodb.getDb().db().collection('shrines').findOne({ _id: ObjectId(req.params.id) });
+        const result = await mongodb.getDb().db().collection('shrines').findOne({ _id: new ObjectId(req.params.id) });
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(result);
     } catch (error) {
@@ -40,7 +40,8 @@ const createShrine = async (req, res) => {
     }
     */
     try {
-        const result = await mongodb.getDb().db().collection('shrines').insertOne(req.body);
+        const newShrine = req.body;
+        const result = await mongodb.getDb().db().collection('shrines').insertOne(newShrine);
         res.setHeader('Content-Type', 'application/json');
         res.status(201).json(result);
     } catch (error) {
@@ -60,7 +61,7 @@ const updateShrine = async (req, res) => {
     */
     try {
         const updatedShrine = req.body;
-        const result = await mongodb.getDb().db().collection('shrines').updateOne({ _id: ObjectId(req.params.id) }, { $set: updatedShrine });
+        const result = await mongodb.getDb().db().collection('shrines').updateOne({ _id: new ObjectId(req.params.id) }, { $set: updatedShrine });
         res.setHeader('Content-Type', 'application/json');
         res.status(204).json(result);
     } catch (error) {
@@ -73,7 +74,7 @@ const deleteShrine = async (req, res) => {
     #swagger.summary = 'Delete a shrine'
     */
     try {
-        const result = await mongodb.getDb().db().collection('shrines').deleteOne({ _id: ObjectId(req.params.id) });
+        const result = await mongodb.getDb().db().collection('shrines').deleteOne({ _id: new ObjectId(req.params.id) });
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(result);
     } catch (error) {
