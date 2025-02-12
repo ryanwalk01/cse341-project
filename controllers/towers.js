@@ -21,7 +21,13 @@ const getTower = async (req, res) => {
     #swagger.summary = 'Get a tower by ID'
     */
     try {
+        if (!ObjectId.isValid(req.params.id)) {
+            return res.status(400).json({ message: 'Invalid Tower ID' });
+        }
         const result = await mongodb.getDb().db().collection('towers').findOne({ _id: new ObjectId(req.params.id) });
+        if (!result) {
+            return res.status(404).json({ message: 'Tower not found' });
+        };
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(result);
     } catch (error) {
@@ -44,7 +50,7 @@ const createTower = async (req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(201).json(result);
     } catch (error) {
-        res.status(500).json(error);
+        res.status(500).json(error || 'An error occurred while creating the tower');
     }
 };
 
@@ -59,12 +65,18 @@ const updateTower = async (req, res) => {
     }
     */
     try {
+        if (!ObjectId.isValid(req.params.id)) {
+            return res.status(400).json({ message: 'Invalid Tower ID' });
+        }
         const updatedTower = req.body;
         const result = await mongodb.getDb().db().collection('shrines').updateOne({ _id: new ObjectId(req.params.id) }, { $set: updatedTower });
+        if (result.matchedCount == 0) {
+            return res.status(404).json({ message: 'Tower not found' });
+        };
         res.setHeader('Content-Type', 'application/json');
         res.status(204).json(result);
     } catch (error) {
-        res.status(500).json(error);
+        res.status(500).json(error || 'An error occurred while updating the tower');
     }
 };
 
@@ -73,11 +85,17 @@ const deleteTower = async (req, res) => {
     #swagger.summary = 'Delete a tower'
     */
     try {
+        if (!ObjectId.isValid(req.params.id)) {
+            return res.status(400).json({ message: 'Invalid Tower ID' });
+        };
         const result = await mongodb.getDb().db().collection('towers').deleteOne({ _id: new ObjectId(req.params.id) });
+        if (result.deletedCount == 0) {
+            return res.status(404).json({ message: 'Tower not found' });
+        }
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(result);
     } catch (error) {
-        res.status(500).json(error);
+        res.status(500).json(error || 'An error occurred while deleting the tower');
     }
 };
 

@@ -25,9 +25,22 @@ Content-Type: application/json
 }
 
 ### Update Shrine
+PUT http://localhost:8080/shrines/67ad2c9b6425b5f11eb72b80 HTTP/1.1
+Content-Type: application/json
 
+{
+  "Shrine Name": "Sakunbomar Shrine",
+  "Lightroot Name": "Ramobnukas Lightroot",
+  "Title": "Rauru's Blessing",
+  "Type": "Rauru's Blessing",
+  "Location": "Great Hyrule Forest",
+  "Region": "Central Hyrule",
+  "Map Layer": "Surface",
+  "In Cave?": "No",
+  "Shrine Quest": "None Shall Pass?"
+}
 ### Delete Shrine
-
+DELETE http://localhost:8080/shrines/67a3f56c89b1e4c06d2ff191 HTTP/1.1
 ### Towers
 
 ### All Towers
@@ -48,9 +61,17 @@ Content-Type: application/json
 }
 
 ### Update Tower
+PUT http://localhost:8080/towers/67a3f58e89b1e4c06d2ff1ac HTTP/1.1
+Content-Type: application/json
 
+{
+  "Name": "Pikida Stonegrove",
+  "Region": "Tabantha Tundra",
+  "Coordinates": "-2318, 3066, 0443",
+  "Launch distance": "443 m"
+}
 ### Delete Tower
-
+DELETE http://localhost:8080/towers/67a3f58e89b1e4c06d2ff1ac HTTP/1.1
 ### Render
 
 ### Shrines
