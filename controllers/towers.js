@@ -69,7 +69,7 @@ const updateTower = async (req, res) => {
             return res.status(400).json({ message: 'Invalid Tower ID' });
         }
         const updatedTower = req.body;
-        const result = await mongodb.getDb().db().collection('shrines').updateOne({ _id: new ObjectId(req.params.id) }, { $set: updatedTower });
+        const result = await mongodb.getDb().db().collection('towers').updateOne({ _id: new ObjectId(req.params.id) }, { $set: updatedTower });
         if (result.matchedCount == 0) {
             return res.status(404).json({ message: 'Tower not found' });
         };

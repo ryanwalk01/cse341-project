@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "TOTK API",
-    "description": "API to manage a database of \"The Legend of Zelda: Tears of the Kingdom\" Shrines and Skyview Towers",
+    "description": "API to manage a database of \"The Legend of Zelda: Tears of the Kingdom\" Shrines and Skyview Towers.",
     "version": "1.0.0"
   },
   "host": "localhost:8080",
@@ -77,6 +77,12 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -110,6 +116,12 @@
           "204": {
             "description": "No Content"
           },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
           "412": {
             "description": "Precondition Failed"
           },
@@ -135,6 +147,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"
@@ -211,6 +229,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "404": {
+            "description": "Not Found"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -247,6 +268,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "404": {
+            "description": "Not Found"
+          },
           "412": {
             "description": "Precondition Failed"
           },
@@ -275,6 +299,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"
