@@ -23,9 +23,13 @@
     "swagger": "node swagger.js"
   },
   "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-oauth2-jwt-bearer": "^1.6.0",
+    "express-openid-connect": "^2.17.1",
+    "googleapis": "^105.0.0",
     "mongodb": "^6.12.0",
     "swagger-ui-express": "^5.0.1",
     "validatorjs": "^3.22.1"
