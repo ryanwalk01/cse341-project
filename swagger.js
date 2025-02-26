@@ -3,7 +3,6 @@ const { oauth2 } = require('googleapis/build/src/apis/oauth2');
 const router = require('express').Router();
 const swaggerUi = require('swagger-ui-express');
 const swaggerAutogen = require('swagger-autogen')();
-require('dotenv').config();
 
 const doc = {
     info: {
@@ -26,13 +25,6 @@ const doc = {
 const outputFile = './swagger.json';
 const routes = ['./routes/index.js'];
 
-swaggerAutogen(outputFile, routes, doc).then(() => {
-    const swaggerDoc = require(outputFile);
-    router.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDoc, {
-        swaggerOptions: {
-            oauth2RedirectUrl: process.env.ISSUER_BASE_URL + '/oauth2-redirect.html'
-        }
-    }));
-});
+swaggerAutogen(outputFile, routes, doc);
 
 module.exports = router;
