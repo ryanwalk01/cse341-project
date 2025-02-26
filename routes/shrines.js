@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const shrineController = require('../controllers/shrines');
 const validation = require('../middleware/validateShrine');
+const { requiresAuth } = require('express-openid-connect');
 
 router.get('/', shrineController.allShrines);
 router.get('/:id', shrineController.getShrine);

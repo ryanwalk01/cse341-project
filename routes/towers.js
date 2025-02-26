@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const towerController = require('../controllers/towers');
 const validation = require('../middleware/validateTower');
+const { requiresAuth } = require('express-openid-connect');
 
 router.get('/', towerController.allTowers);
 router.get('/:id', towerController.getTower);
