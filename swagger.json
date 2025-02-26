@@ -5,10 +5,10 @@
     "description": "API to manage a database of \"The Legend of Zelda: Tears of the Kingdom\" Shrines and Skyview Towers.",
     "version": "1.0.0"
   },
-  "host": "cse341-project-ryan.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/towers/": {
@@ -307,6 +307,13 @@
             "description": "Internal Server Error"
           }
         }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2"
       }
     }
   }
